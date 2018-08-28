@@ -1,10 +1,16 @@
-const overclass = (stylesLocal = {}) => (strings, ...args) => {
-  const parsedStrings = strings.reduce((acc, curr, i) => `${acc.trim()} ${args[i - 1] || ''} ${curr.trim()}`, '').trim();
-  return parsedStrings
-    .replace(/\s+/gm, ' ')
-    .split(' ')
-    .map(item => (stylesLocal[item] || item))
-    .join(' ');
-};
+const classnames = require('./src/classnames.js');
 
-module.exports = overclass;
+const Overclass = (styles = {}) => Overclass.oc(styles);
+
+Overclass.oc = (styles = {}) =>
+  (strings, ...args) =>
+    classnames(strings, ...args)
+      .map(item => (styles[item] || item))
+      .join(' ');
+
+Overclass.cn = (strings, ...args) =>
+  classnames(strings, ...args)
+    .filter(item => !!item)
+    .join(' ');
+
+module.exports = Overclass;
