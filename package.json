@@ -1,0 +1,33 @@
+{
+  "name": "overclass",
+  "version": "0.0.1",
+  "description": "manipulate classnames based on css modules or simple classes using tagged template strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rntgspr/overclass.git"
+  },
+  "keywords": [
+    "css",
+    "modules",
+    "classnames"
+  ],
+  "author": {
+    "name" : "gaspar",
+    "email" : "rntgspr@gmail.com"
+  },
+  "contributors": [
+    {
+      "name" : "thismarcoantonio",
+      "email" : "thismarcoantonio@gmail.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rntgspr/overclass/issues"
+  },
+  "homepage": "https://github.com/rntgspr/overclass#readme"
+}
