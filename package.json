@@ -4,7 +4,8 @@
   "description": "manipulate classnames based on css modules or simple classes using tagged template strings",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "./node_modules/.bin/mocha ./tests/**/*.js --require babel-register",
+    "test:watch": "./node_modules/.bin/mocha ./tests/**/*.js --require babel-register --watch"
   },
   "repository": {
     "type": "git",
@@ -16,18 +17,24 @@
     "classnames"
   ],
   "author": {
-    "name" : "gaspar",
-    "email" : "rntgspr@gmail.com"
+    "name": "gaspar",
+    "email": "rntgspr@gmail.com"
   },
   "contributors": [
     {
-      "name" : "thismarcoantonio",
-      "email" : "thismarcoantonio@gmail.com"
+      "name": "thismarcoantonio",
+      "email": "thismarcoantonio@gmail.com"
     }
   ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rntgspr/overclass/issues"
   },
-  "homepage": "https://github.com/rntgspr/overclass#readme"
+  "homepage": "https://github.com/rntgspr/overclass#readme",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
 }
