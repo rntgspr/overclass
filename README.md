@@ -13,7 +13,7 @@ Use:
     content: 'robot';
 }
 .bastion--turret {
-    background0-color: orange;
+    background-color: orange;
 }
 ```
 
