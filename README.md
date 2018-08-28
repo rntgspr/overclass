@@ -19,10 +19,13 @@ Use:
 
 **myJavascriptFile.js**
 ```javascript
-import oc from 'overclass';
+import oc, { cn } from 'overclass';
 
 import styles from './mySCSSFile.scss';
 
 <div className={oc(styles)`tracer tracer--nano`} />
 <div className={oc(styles)`bastion ${turret && 'bastion--turret'}`} />
+
+<div className={cn`bastion ${turret && 'bastion--turret'}` modules} />
+
 ```
