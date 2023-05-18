@@ -1,6 +1,6 @@
 {
   "name": "overclass",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "Manipulate classNames based on css/scss modules using tagged template strings or simple build directly classNames attribute easily",
   "main": "index.js",
   "scripts": {
