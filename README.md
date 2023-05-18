@@ -1,6 +1,6 @@
 # overclass
 
-Manipulate class names based on css modules or simple classes using tagged template strings
+Manipulate classNames based on css/scss modules using tagged template strings or simple build directly classNames attribute easily
 
 Use:
 **mySCSSFile.scss**
@@ -8,24 +8,51 @@ Use:
 .tracer {
     color: blue;
 }
+.tracer__nano {
+    color: silver;
+}
 
 .bastion {
     content: 'robot';
 }
-.bastion--turret {
+.bastion__turret {
     background-color: orange;
+}
+
+.hanzo {
+    content: '-> -> ->';
+
+    &__arrow-hold {
+        content: '------ --- -- ->';
+    }
+}
+
+.genji {
+    color: green;
+
+    &__ultimate {
+        display: none;
+    }
 }
 ```
 
 **myJavascriptFile.js**
 ```javascript
-import oc, { cn } from 'overclass';
+import oc, { cn, jn } from 'overclass';
 
 import styles from './mySCSSFile.scss';
 
-<div className={oc(styles)`tracer tracer--nano`} />
-<div className={oc(styles)`bastion ${turret && 'bastion--turret'}`} />
+<div className={oc(styles)`tracer tracer__nano`} />
+<div className={oc(styles)`bastion ${turret && 'bastion__turret'}`} />
 
-<div className={cn`bastion ${turret && 'bastion--turret'}` modules} />
+const s76 = oc(styles);
+<div className={s76`hanzo ${hasTank && 'hanzo__arrow-hold'}`} />
+<div className={s76`genji ${hasTank && 'genji__ultimate'}`} />
+
+/* for classnames */
+<div className={cn`bastion ${turret && 'bastion__turret'}`} />
+
+/* for joined */
+<div className={jn('bastion', turret && 'bastion__turret')} />
 
 ```
