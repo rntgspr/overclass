@@ -5,16 +5,14 @@ const Overclass = (styles = {}) => Overclass.oc(styles);
 
 Overclass.oc =
   (styles = {}) =>
-  (strings, ...args) =>
-    classnames(strings, ...args)
-      .map((item) => styles[item] || item)
-      .join(" ");
+  (literal, ...args) =>
+    joined(...classnames(literal, ...args).map((item) => styles[item] || item));
 
-Overclass.cn = (strings, ...args) =>
-  classnames(strings, ...args)
-    .filter((item) => !!item)
-    .join(" ");
+Overclass.classnames = (strings, ...args) =>
+  classnames(strings, ...args).join(" ");
+Overclass.cn = Overclass.classnames;
 
-Overclass.jn = (...args) => joined(...args);
+Overclass.join = (...args) => joined(...args);
+Overclass.jn = Overclass.join;
 
 module.exports = Overclass;

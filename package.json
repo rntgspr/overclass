@@ -1,11 +1,11 @@
 {
   "name": "overclass",
-  "version": "0.1.7",
-  "description": "manipulate classnames based on css modules or simple classes using tagged template strings",
+  "version": "1.0.1",
+  "description": "manipulate classNames based on css modules or simple classes using tagged template strings",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha ./tests/**/*.js --require babel-register",
-    "test:watch": "./node_modules/.bin/mocha ./tests/**/*.js --require babel-register --watch"
+    "test": "mocha ./tests/**/*.js",
+    "test:watch": "mocha ./tests/**/*.js --watch"
   },
   "repository": {
     "type": "git",
@@ -31,10 +31,11 @@
     "url": "https://github.com/rntgspr/overclass/issues"
   },
   "homepage": "https://github.com/rntgspr/overclass#readme",
-  "devDependencies": {
-    "babel-preset-env": "^1.7.0",
-    "babel-register": "^6.26.0",
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  },
+  "engines": {
+    "node": "18.16.0"
   }
 }
