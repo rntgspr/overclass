@@ -4,6 +4,7 @@
   "description": "Manipulate classNames based on css/scss modules using tagged template strings or simple build directly classNames attribute easily",
   "main": "index.js",
   "scripts": {
+    "changelog": "npx auto-changelog -p",
     "test": "mocha ./tests/**/*.js",
     "test:watch": "mocha ./tests/**/*.js --watch"
   },
@@ -33,6 +34,10 @@
   "homepage": "https://github.com/rntgspr/overclass#readme",
   "devDependencies": {
     "chai": "^4.3.7",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "mocha": "^10.2.0"
   },
   "engines": {
