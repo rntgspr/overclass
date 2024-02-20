@@ -1,6 +1,6 @@
 {
   "name": "overclass",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "Manipulate classNames based on css/scss modules using tagged template strings or simple build directly classNames attribute easily",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "classnames"
   ],
   "author": {
-    "name": "gaspar",
+    "name": "rntgspr",
     "email": "rntgspr@gmail.com"
   },
   "contributors": [
@@ -38,6 +38,6 @@
     "eslint-plugin-prettier": "^4.2.1"
   },
   "engines": {
-    "node": ">=20.11.0"
+    "node": ">=20.0.0"
   }
 }
